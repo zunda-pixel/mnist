@@ -3,4 +3,5 @@ MNIST(Mixed National Institute of Standards and Technology database)とは、手
 
 # 参考
 コードは以下のものを参考にGPUに対応させ1枚だけ画像を表示しています。
+
 https://qiita.com/iss-f/items/b12308b44376ba69ac6a
