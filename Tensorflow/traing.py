@@ -5,7 +5,6 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import RMSprop
 
-
 physical_devices = list_physical_devices('GPU')
 if len(physical_devices) > 0:
     for k in range(len(physical_devices)):
@@ -41,11 +40,11 @@ model.add(Dense(num_classes, activation='softmax'))
 
 model.summary()
 model.compile(loss='categorical_crossentropy',
-            optimizer=RMSprop(),
-            metrics=['accuracy'])
+             optimizer=RMSprop(),
+             metrics=['accuracy'])
 
 batch_size = 16
 epochs = 3
 
 history  = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, verbose=1, validation_data=(x_test, y_test))
-model.save('widgets.h5')
+model.save('model_widgets.h5')
