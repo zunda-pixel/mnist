@@ -38,8 +38,8 @@ model.add(Dense(512, activation='relu'))
 model.add(Dropout(0.2))
 model.add(Dense(num_classes, activation='softmax'))
 
-model.summary()
 model.compile(loss='categorical_crossentropy', optimizer=RMSprop(), metrics=['accuracy'])
+model.summary()
 
 batch_size = 16
 epochs = 3
