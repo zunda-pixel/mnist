@@ -13,7 +13,7 @@ num_classes = len(list(set(y_test)))
 
 y_test = to_categorical(y_test, num_classes)
 
-model = load_model('widgets.h5')
+model = load_model('model_widgets.h5')
 
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
