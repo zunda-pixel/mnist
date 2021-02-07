@@ -15,6 +15,6 @@ y_test = to_categorical(y_test, num_classes)
 
 model = load_model('model_widgets.h5')
 
-score = model.evaluate(x_test, y_test, verbose=0)
-print('Test loss:', score[0])
-print('Test accuracy:', score[1])
+loss, accuracy = model.evaluate(x_test, y_test, verbose=0)
+print('Test loss:', loss)
+print('Test accuracy:', accuracy)
